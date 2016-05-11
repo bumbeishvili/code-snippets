@@ -6,11 +6,11 @@ function EncodingConverter() {
     'A', 'B', 'ჩ', 'D', 'E', 'F', 'G', 'H', 'I', 'ჟ', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'ღ', 'შ', 'თ', 'U', 'V', 'ჭ', 'X', 'Y', 'ძ', '[', '\\', ']', '^', '_', '`', 'ა', 'ბ', 'ც', 'დ', 'ე', 'ფ', 'გ', 'ჰ', 'ი', 'ჯ', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ქ', 'რ', 'ს', 'ტ', 'უ', 'ვ', 'წ', 'ხ', 'ყ', 'ზ'
   ];
 
-  this.ToLatin = function(geoWord) {
+  this.toLatin = function(geoWord) {
     return convert(geoWord, geoToLatinBinding, 'ა', 'ჰ', 4304);
   }
 
-  this.ToGeorgian = function(latinWord) {
+  this.toGeorgian = function(latinWord) {
     return convert(latinWord, latinToGeoBinding, 'A', 'z', 65);
   }
 
