@@ -55,8 +55,8 @@ usage:
 ```javascript
 var c = new EncodingConverter()
 
-c.ToLatin('აბგდევზთიკლმნოპჟრსტუფქღყშცძწჭხჯჰ')
-c.ToGeorgian('abgdevzTiklmnopJrstufqryScZcwWxjh')
+c.toLatin('აბგდევზთიკლმნოპჟრსტუფქღყშცძწჭხჯჰ')
+c.toGeorgian('abgdevzTiklmnopJrstufqryScZcwWxjh')
 ```
 
 returns:  
