@@ -46,6 +46,28 @@ returns:
 
 ---
 
+### `converter.js`  
+desc:  
+`converts word from latin encoding to georgian (end reverse)`  
+include:  
+`<script type="text/javascript" src="converter.js" ></script>`  
+usage:  
+```javascript
+var c = new EncodingConverter()
+
+c.ToLatin('აბგდევზთიკლმნოპჟრსტუფქღყშცძწჭხჯჰ')
+c.ToGeorgian('abgdevzTiklmnopJrstufqryScZcwWxjh')
+```
+
+returns:  
+`1. abgdevzTiklmnopJrstufqRyScZwWxjh`  
+`2. აბგდევზთიკლმნოპჟრსტუფქრყშცძცწჭხჯჰ  `
+
+
+[example](http://bumbeishvili.github.io/code-snippets/JSEncodingConverter/)
+
+---
+
 
 ### `GeoGrammar.js`  
 desc:  
