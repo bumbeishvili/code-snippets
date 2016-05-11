@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+
+    <title>CodePen - A Pen by  dato</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+        <style>
+      body {
+            background-image: url("http://i.stack.imgur.com/IehB7.png");
+        }
+
+        #container {
+          font-size:20px;
+            color: #330066;
+            font-weight: bold;
+            background-image: url("http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0117/8370/rcrayon_background-blue_shop_thumb.jpg");
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px;
+            text-indent: 2%;
+            border: solid 2px;
+            clear: both;
+            padding: 5px;
+            visibility: hidden;
+        }
+
+        #textInput {
+           font-size:20px;
+            margin-left: 17%;
+            display: inline;
+            margin-bottom: 5%;
+            margin-top: 10px;
+            width: 60%;
+            height: 150px;
+            border: solid 2px;
+            float: left;
+        }
+
+        #selectButton {
+          clear:both;
+          font-size:20px;
+            margin-left: 2%;
+            margin-top: 115px;
+            border: solid 2px;
+        }
+    </style>
+
+    
+    
+    
+  </head>
+
+  <body translate="no" >
+
+    <textarea class="form-control" id="textInput" placeholder="შეიყვანეთ ტექსტი"></textarea>
+<div class="col-md-10" style="padding-bottom:20px">
+  <button class="btn btn-default pull-right" onClick="setResult('GEO')">ToGeo</button>
+  <button class="btn btn-default pull-right" onClick="setResult('ENG')">ToLatin</button>
+</div>
+
+
+<div id="container">
+  <table>
+    <tr>
+      <td id="result" colspan="100%"></td>
+    </tr>
+  </table>
+</div>
+    
+    
+        <script>
+      var c = new EncodingConverter();
+
+function setResult(flag) {
+  var value = getValue('textInput');
+  value = value.trim();
+  if (value == '') hideResultElement()
+  else showResultElement()
+  setValue("result", flag == 'GEO' ? c.toGeorgian(value) : c.toLatin(value))
+}
+
+function setValue(id, myObject) {
+  document.getElementById(id).innerHTML = myObject;
+}
+
+function getValue(id) {
+  return document.getElementById(id).value;
+}
+
+function hideResultElement() {
+  document.getElementById('container').style.visibility = 'hidden';
+}
+
+function showResultElement() {
+  document.getElementById('container').style.visibility = 'visible';
+}
+
+function EncodingConverter() {
+  var geoToLatinBinding = [
+    'a', 'b', 'g', 'd', 'e', 'v', 'z', 'T', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'J', 'r', 's', 't', 'u', 'f', 'q', 'R', 'y', 'S', 'C', 'c', 'Z', 'w', 'W', 'x', 'j', 'h'
+  ];
+  var latinToGeoBinding = [
+    'A', 'B', 'ჩ', 'D', 'E', 'F', 'G', 'H', 'I', 'ჟ', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'ღ', 'შ', 'თ', 'U', 'V', 'ჭ', 'X', 'Y', 'ძ', '[', '\\', ']', '^', '_', '`', 'ა', 'ბ', 'ც', 'დ', 'ე', 'ფ', 'გ', 'ჰ', 'ი', 'ჯ', 'კ', 'ლ', 'მ', 'ნ', 'ო', 'პ', 'ქ', 'რ', 'ს', 'ტ', 'უ', 'ვ', 'წ', 'ხ', 'ყ', 'ზ'
+  ];
+
+  this.toLatin = function(geoWord) {
+    return convert(geoWord, geoToLatinBinding, 'ა', 'ჰ', 4304);
+  }
+
+  this.toGeorgian = function(latinWord) {
+    return convert(latinWord, latinToGeoBinding, 'A', 'z', 65);
+  }
+
+  function convert(word, binding, min, max, charNum) {
+    var buffer = []
+    var i = 0;
+    word.split('').forEach(function(c) {
+      if (c >= min && c <= max) {
+        buffer[i++] = binding[c.charCodeAt(0) - charNum];
+      } else {
+        buffer[i++] = c;
+      }
+    });
+    return buffer.join('');
+  }
+}
+      //# sourceURL=pen.js
+    </script>
+
+    
+    
+    
+  </body>
+</html>
+ 
