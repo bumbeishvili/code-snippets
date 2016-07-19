@@ -5,7 +5,7 @@ Grammar = {}
 ArgumentList = {
     //xmovan fudziani gamonaklisi sakutari saxelebi
     xmovanFudzianiGamonaklisiSakutariSaxelebi: ['ნანული', 'აკაკი',
-        'გიორგი', 'გოდერძი'
+        'გიორგი', 'გოდერძი','მაგული'
     ]
 }
 Methods = {
