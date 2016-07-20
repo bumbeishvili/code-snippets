@@ -17,7 +17,7 @@ Methods = {
     gamonaklisiSakutariSaxelia: function(sakutariSaxeli) {
         var gamonaklisebi = ArgumentList.xmovanFudzianiGamonaklisiSakutariSaxelebi;
         for (var i = 0; i < gamonaklisebi.length; i++) {
-            if (gamonaklisebi[i] == sakutariSaxeli) {
+            if ( sakutariSaxeli.endsWith(gamonaklisebi[i])) {
                 return true;
             }
         }
