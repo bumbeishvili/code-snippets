@@ -1,5 +1,16 @@
 # code snippets
 
+## contents
++ c sharp
+  - converter.cs
++ php
+  - converter.php
++ js
+  - [number_to_text.js](#number_to_text.js)
+  - converter.js
+  - GeoGrammar.js
+
+
 ## C sharp (C#)
 
 ### `Converter.cs`
@@ -29,6 +40,7 @@ returns:
 
 
 ## Javascript (js)
+ <a id="number_to_text.js"></a> 
 ### `number_to_text.js`  
 desc:  
 `converts max 10^3003 numbers to georgian text`  
