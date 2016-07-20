@@ -6,13 +6,14 @@ ArgumentList = {
     //xmovan fudziani gamonaklisi sakutari saxelebi
     xmovanFudzianiGamonaklisiSakutariSaxelebi: ['ნანული', 'აკაკი',
         'გიორგი', 'გოდერძი','მაგული','ირაკლი','ბადრი','დიმიტრი','ციური','ვალერი','ზაური','ვიტალი','გუგული','ნუკრი','უშანგი'
-,'ნინელი','როინი','კუკური','სერგეი' ,'ანდრეი'   ,'ივერი','დომენტი','შუქრი','კლიმენტი','გულნარი','ლეონტიმ']
+,'ნინელი','როინი','კუკური'    ,'ივერი','დომენტი','შუქრი','კლიმენტი','გულნარი','ლეონტი']
 }
 Methods = {
     gamonaklisiSakutariSaxelia: function(sakutariSaxeli) {
+        if(this.xmovnebitMtavrdeba(sakutariSaxeli)) return true;
         var gamonaklisebi = ArgumentList.xmovanFudzianiGamonaklisiSakutariSaxelebi;
         for (var i = 0; i < gamonaklisebi.length; i++) {
-            if ( sakutariSaxeli.endsWith(gamonaklisebi[i] || this.xmovnebitMtavrdeba)) {
+            if ( sakutariSaxeli.endsWith(gamonaklisebi[i])) {
                 return true;
             }
         }
