@@ -12,9 +12,9 @@
 
 
 ## C sharp (C#)
-
-### `Converter.cs`
  <a id="Converter.cs"></a> 
+### `Converter.cs`
+
 usage:  
 `1. Converter.ToGeorgian("iyo arabeTs rostevan");`  
 `2. Converter.ToLatin("ტუ ბე ორ ნოტ ტუ ბე");`  
@@ -25,9 +25,9 @@ returns:
 ---
 
 
-
-## PHP (php)  
  <a id="converter.php"></a> 
+## PHP (php)  
+
 ## `converter.php`  
 include:  
 `1. include("converter.php");`  
@@ -59,9 +59,9 @@ returns:
 [example](http://bumbeishvili.github.io/code-snippets/NumberToGeorgian/)
 
 ---
-
-### `converter.js`  
  <a id="converter.js"></a> 
+### `converter.js`  
+
 desc:  
 `converts word from latin encoding to georgian (end reverse)`  
 include:  
@@ -83,9 +83,9 @@ returns:
 
 ---
 
-
-### `GeoGrammar.js`  
  <a id="GeoGrammar.js"></a> 
+### `GeoGrammar.js`  
+
 desc:  
 `აბრუნებს საკუთარ სახელებს`  
 include:  
