@@ -5,14 +5,14 @@ Grammar = {}
 ArgumentList = {
     //xmovan fudziani gamonaklisi sakutari saxelebi
     xmovanFudzianiGamonaklisiSakutariSaxelebi: ['ნანული', 'აკაკი',
-        'გიორგი', 'გოდერძი','მაგული'
-    ]
+        'გიორგი', 'გოდერძი','მაგული','ირაკლი','ბადრი','დიმიტრი','ციური','ვალერი','ზაური','ვიტალი','გუგული','ნუკრი','უშანგი'
+,'ნინელი','როინი','კუკური','სერგეი' ,'ანდრეი'   ,'ივერი','დომენტი','შუქრი','კლიმენტი','გულნარი','ლეონტიმ']
 }
 Methods = {
     gamonaklisiSakutariSaxelia: function(sakutariSaxeli) {
         var gamonaklisebi = ArgumentList.xmovanFudzianiGamonaklisiSakutariSaxelebi;
         for (var i = 0; i < gamonaklisebi.length; i++) {
-            if ( sakutariSaxeli.endsWith(gamonaklisebi[i])) {
+            if ( sakutariSaxeli.endsWith(gamonaklisebi[i] || this.xmovnebitMtavrdeba)) {
                 return true;
             }
         }
@@ -41,6 +41,18 @@ Methods = {
                 return false;
         }
         return true;
+    },
+    xmovnebitMtavrdeba: function(sityva) {
+        var xmovnitMtavrdeba = !this.tanxmovnitMtavrdeba(sityva);
+        switch (sityva[sityva.length - 2]) {
+            case 'ა':
+            case 'ე':
+            case 'ი':
+            case 'ო':
+            case 'უ':
+                return true && xmovnitMtavrdeba;
+        }
+        return false;
     },
     BruSakSaxSax: function(sakutariSaxeli) {
         if (Methods.tanxmovnitMtavrdeba(sakutariSaxeli))
