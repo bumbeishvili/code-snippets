@@ -2,18 +2,19 @@
 
 ## contents
 + c sharp
-  - converter.cs
+  - [converter.cs](#converter.cs)
 + php
-  - converter.php
+  - [converter.php](#converter.php)
 + js
   - [number_to_text.js](#number_to_text.js)
-  - converter.js
-  - GeoGrammar.js
+  - [converter.js](#converter.js)
+  - [GeoGrammar.js](#GeoGrammar.js)
 
 
 ## C sharp (C#)
 
 ### `Converter.cs`
+ <a id="Converter.cs"></a> 
 usage:  
 `1. Converter.ToGeorgian("iyo arabeTs rostevan");`  
 `2. Converter.ToLatin("ტუ ბე ორ ნოტ ტუ ბე");`  
@@ -26,6 +27,7 @@ returns:
 
 
 ## PHP (php)  
+ <a id="converter.php"></a> 
 ## `converter.php`  
 include:  
 `1. include("converter.php");`  
@@ -59,6 +61,7 @@ returns:
 ---
 
 ### `converter.js`  
+ <a id="converter.js"></a> 
 desc:  
 `converts word from latin encoding to georgian (end reverse)`  
 include:  
@@ -82,6 +85,7 @@ returns:
 
 
 ### `GeoGrammar.js`  
+ <a id="GeoGrammar.js"></a> 
 desc:  
 `აბრუნებს საკუთარ სახელებს`  
 include:  
