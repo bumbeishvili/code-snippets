@@ -15,9 +15,10 @@ ArgumentList = {
 }
 Methods = {
     gamonaklisiSakutariSaxelia: function(sakutariSaxeli) {
+        if(this.xmovnebitMtavrdeba(sakutariSaxeli)) return true;
         var gamonaklisebi = ArgumentList.xmovanFudzianiGamonaklisiSakutariSaxelebi;
         for (var i = 0; i < gamonaklisebi.length; i++) {
-            if ( sakutariSaxeli.endsWith(gamonaklisebi[i] || this.xmovnebitMtavrdeba(sakutariSaxeli))) {
+            if ( sakutariSaxeli.endsWith(gamonaklisebi[i])) {
                 return true;
             }
         }
