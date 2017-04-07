@@ -32,6 +32,11 @@ var node = node||document.body; // base node
   while(node = childs[i]){ 
     if (node.nodeType == 3){ // text node found, do the replacement
       if (node.textContent && node.textContent.indexOf(' da ') !== -1 ) {
+       
+        node.textContent = node.textContent.replace(/sh/g, 'შ')
+        node.textContent = node.textContent.replace(/dz/g, 'ძ')
+        node.textContent = node.textContent.replace(/ch/g, 'ჩ')
+
         node.textContent = toGeorgian(node.textContent)
       } 
     } else { // not a text mode, look forward
