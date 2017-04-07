@@ -79,6 +79,11 @@ returns:
 `2. აბგდევზთიკლმნოპჟრსტუფქრყშცძცწჭხჯჰ  `
 
 
+### `converter.js` 
+convert latin text to geo  
+https://github.com/bumbeishvili/code-snippets/blob/master/js/convertLatingTextToGeo.js
+
+
 [example](http://bumbeishvili.github.io/code-snippets/JSEncodingConverter/)
 
 ---
